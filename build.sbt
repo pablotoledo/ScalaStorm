@@ -18,3 +18,5 @@ scalacOptions ++= Seq("-feature", "-deprecation", "-Yresolve-term-conflict:packa
 fork := true
 
 resolvers += "clojars" at "https://clojars.org/repo"
+
+credentials += Credentials("Sonatype Nexus Repository Manager", "localhost", "deployment", "deployment123")

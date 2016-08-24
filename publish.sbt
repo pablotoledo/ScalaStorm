@@ -1,7 +1,7 @@
 publishMavenStyle := true
 
 publishTo <<= version { (v: String) =>
-  if (v.trim.endsWith("SNAPSHOT")) Some(Opts.resolver.sonatypeSnapshots) else Some(Opts.resolver.sonatypeStaging)
+  Some("snapshots" at "http://localhost:8081/nexus/" + "content/repositories/snapshots")
 }
 
 publishArtifact in Test := false
